@@ -6,17 +6,17 @@ export interface Student {
  }
 /* Creating two studets using Student interface */
 const studentA:Student = {
-  firstName: 'Thomas';
-  lastName: 'chris';
+  firstName: "Thoma";
+  lastName: "chris';
   age: 25;
-  location: German;
+  location: "German";
   }
 
 const studentB: Student = {
-  firstName: Fantu;
-  lastName: Tada;
+  firstName: "Fantu";
+  lastName: "Tada";
   age: 23;
-  location: Ethiopia;
+  location: "Ethiopia";
   }
 
 /* creating an array for the above two students */
