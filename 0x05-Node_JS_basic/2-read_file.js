@@ -10,24 +10,24 @@ const countStudents = (path) => {
     throw Error('Cannot load the database');
   }
   const data = fs.readFileSync(path, 'utf8');
-  const studentData = data.split('\n')
-    .map((students) => students.split(','))
-    .filter((students) => students.length === 4 && students[0] !== 'firstname')
-    .map((students) => ({
-      firstname: students[0],
-      lastname: students[1],
-      age: students[2],
-      field: students[3],
+  const students = data.split('\n')
+    .map((student) => student.split(','))
+    .filter((student) => student.length === 4 && student[0] !== 'firstname')
+    .map((student) => ({
+      firstname: student[0],
+      lastname: student[1],
+      age: student[2],
+      field: student[3],
     }));
 
-  const csStudents = studentData
-    .filter((students) => students.field === 'CS')
-    .map((students) => students.firstname);
+  const csStudents = students
+    .filter((student) => student.field === 'CS')
+    .map((student) => student.firstname);
 
-  const sweStudents = studentData
-    .filter((students) => students.field === 'SWE')
-    .map((students) => students.firstname);
-  console.log(`Number of students: ${studentData.length}`);
+  const sweStudents = students
+    .filter((student) => student.field === 'SWE')
+    .map((student) => student.firstname);
+  console.log(`Number of students: ${students.length}`);
   console.log(`Number of students in CS: ${csStudents.length}. List: ${csStudents.join(',')}`);
   console.log(`Number of students in SWE: ${sweStudents.length}. List: ${sweStudents.join(',')}`);
 };
