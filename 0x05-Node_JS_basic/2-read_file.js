@@ -6,8 +6,8 @@
 const fs = require('fs');
 /* accessing the filepath */
 const countStudents = (path) => {
-  if (!fs.existsynch(path)) {
-    throw new Error('Cannot load the database');
+  if (!fs.existsSynch(path)) {
+    throw Error('Cannot load the database');
   }
   const data = fs.readFileSync(path, 'utf-8');
   const studentData = data
@@ -28,9 +28,9 @@ const countStudents = (path) => {
   const sweStudents = studentData
     .filter((students) => students.field === 'SWE')
     .map((students) => students.firstname);
-  console.log(`Number of students ${studentData.length}`);
-  console.log(`Number of students in CS:${csStudents.length}. List: ${csStudents.join(',')}`);
-  console.log(`Number of students in SWE:${sweStudents.length}. List: ${sweStudents.join(',')}`);
+  console.log(`Number of students : ${studentData.length}`);
+  console.log(`Number of students in CS: ${csStudents.length}. List: ${csStudents.join(',')}`);
+  console.log(`Number of students in SWE: ${sweStudents.length}. List: ${sweStudents.join(',')}`);
 };
 
 module.exports = countStudents;
