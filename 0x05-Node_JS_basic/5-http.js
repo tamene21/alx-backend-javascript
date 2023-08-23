@@ -11,7 +11,7 @@ const port = 1245;
 const app = http.createServer((req, res) => {
   res.statusCode = 200;
   if (req.url === '/') {
-    res.write('Hello Holberton School!');
+    res.end('Hello Holberton School!');
   } else if (req.url === '/students') {
     res.write('This is the list of our students\n');
     students(process.argv[2]).then((data) => {
