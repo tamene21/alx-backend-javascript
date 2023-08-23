@@ -6,12 +6,11 @@
 const fs = require('fs');
 /* accessing the filepath */
 const countStudents = (path) => {
-  if (!fs.existsSynch(path)) {
+  if (!fs.existsSync(path)) {
     throw Error('Cannot load the database');
   }
-  const data = fs.readFileSync(path, 'utf-8');
-  const studentData = data
-    .split('\n')
+  const data = fs.readFileSync(path, 'utf8');
+  const studentData = data.split('\n')
     .map((students) => students.split(','))
     .filter((students) => students.length === 4 && students[0] !== 'firstname')
     .map((students) => ({
