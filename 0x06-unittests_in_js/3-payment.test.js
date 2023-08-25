@@ -8,7 +8,7 @@ describe('sendPaymentRequestToApi', () => {
     const buyer = sinon.spy(Utils);
 
     sendPaymentRequestToApi(100, 20);
-    expect(buyer.(calculateNumber.calledWith('SUM', 100, 20)).to.be.true;
+    expect(buyer.calculateNumber.calledWith('SUM', 100, 20)).to.be.true;
     expect(buyer.calculateNumber.callCount).to.be.equal(1);
     buyer.calculateNumber.restore();
   });
