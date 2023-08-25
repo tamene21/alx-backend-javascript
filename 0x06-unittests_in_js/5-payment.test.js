@@ -15,8 +15,8 @@ describe('sendPaymentRequestToApi', () => {
   });
 
   it('sendPaymentRequestToApi(100, 20)', () => {
-    sendPaymentRequestToApi(100,20);
-    expect(buyer.log.calledWith('The total is:120')).to.be.true;
+    sendPaymentRequestToApi(100, 20);
+    expect(buyer.log.calledWith('The total is: 120')).to.be.true;
     expect(buyer.log.calledOnce).to.be.true;
   });
 
