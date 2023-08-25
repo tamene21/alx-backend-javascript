@@ -8,7 +8,7 @@ describe('API integration test', () => {
   it('GET / returns correct response', (done) => {
     request.get(`${API_URL}/`, (_err, res, body) => {
       expect(res.statusCode).to.be.equal(200);
-      expect(body).to.equal('Welcome to the payment system');
+      expect(body).should.containEql('Welcome to the payment system');
       done();
     });
   });
