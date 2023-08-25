@@ -5,7 +5,7 @@ describe('getPaymentTokenFromAPI', () => {
   it('getPaymentTokenFromAPI(success), where success == true', (done) => {
     getPaymentTokenFromAPI(true)
       .then((res) => {
-        expect(res).to.deep.equal({data:'Success from API'});
+        expect(res).to.deep.equal({data: 'Successful response from API'});
 	done();
       });
   });
