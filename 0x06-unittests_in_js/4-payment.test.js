@@ -4,8 +4,8 @@ const { expect } = require('chai');
 const sendPaymentRequestToApi = require('./4-payment');
 
 describe('sendPaymentRequestToApi', () => {
-  it('Use calculateNumber method for sending payment request', () =>{
-    const buyer = sinon.spy(Utils);
+  it('sendPaymentRequestToApi calls console', () =>{
+    const buyer = sinon.spy(console);
     const spie = sinon.stub(Utils, 'calculateNumber');
 
     spie.returns(10);
