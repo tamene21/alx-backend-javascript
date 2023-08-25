@@ -4,4 +4,4 @@ const getPaymentTokenFromAPI = (success) => new promise((resolve, _reject) => {
  }
 )};
 
-module.exports = getPaymentTokenFromApi;
+module.exports = getPaymentTokenFromAPI;
