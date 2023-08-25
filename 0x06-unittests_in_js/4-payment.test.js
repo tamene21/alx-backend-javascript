@@ -13,7 +13,7 @@ describe('sendPaymentRequestToApi', () => {
     sendPaymentRequestToApi(100, 20);
     expect(spie.calledWith('SUM', 100, 20)).to.be.true;
     expect(spie.callCount).to.be.equal(1);
-    expect(buyer.log.calledWith('The total is: 10)).to.be.true;
+    expect(buyer.log.calledWith('The total is: 10')).to.be.true;
     expect(buyer.log.callCount).to.be.equal(1);
     spie.restore();
     buyer.log.restore();
